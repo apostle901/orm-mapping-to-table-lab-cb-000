@@ -1,5 +1,5 @@
 class Student
-  attr_reader :name, :grade
+  attr_reader :name, :grade, :id
 
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
@@ -28,7 +28,7 @@ class Student
 
   def save
     sql = <<-SQL
-      INSERT INTO students (name, grade) 
+      INSERT INTO students (name, grade)
       VALUES (?, ?)
     SQL
 
